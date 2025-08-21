@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title | striptags }}{% endblock %}
+{% block content %}
+      <article class="page my-4">
+        <header>
+          <h2 class="text-header text-center" itemprop="headline" id="{{ page.slug }}">{{ page.title }}</h2>
+        </header>
+        <section id="content" itemprop="mainEntityOfPage">
+          {{ page.content }}
+        </section>
+      </article>
+{% endblock %}
+
+{--% include "fragments/author.html" %--}

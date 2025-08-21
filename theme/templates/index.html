@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+      <ul>
+        {% for article in articles_page.object_list %}
+        <li class="post my-4">
+          <h4>
+            <a href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">{{ article.title }}</a>
+          </h4>
+          {{ article.summary }}
+        </li>
+        {% endfor %}
+      </ul>
+{% endblock %}
