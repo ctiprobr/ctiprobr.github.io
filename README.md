@@ -1,3 +1,3 @@
 # Página da comunidade
 
-Para propor novas postagens basta registrar _merge request_ do respectivo arquivo dentro da pasta [conteudo/Artigos](tree/main/conteudo/Artigos) ou [conteudo/Notícias](tree/main/conteudo/Noticias).
+Para propor novas postagens abra uma issue com a proposta de texto ou já com o respectivo arquivo no formato markdown a ser publicado na pasta [conteudo/Artigos] ou [conteudo/Notícias].
