@@ -12,9 +12,11 @@
             {% endif %}
             Publicado em <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
           </p>
-          <img src="static/imagens/Artigos/{{ article.thumbnail }}">
+          {% if article.thumbnail %}
+          <img src="/static/imagens/{{ article.thumbnail }}">
+          {% endif %}
         </header>
-        <section id="content" itemprop="mainEntityOfPage">
+        <section id="content" class="mt-4" itemprop="mainEntityOfPage">
           {{ article.content }}
         </section>
         <footer>

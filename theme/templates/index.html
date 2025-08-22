@@ -1,13 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
-      <ul>
-        {% for article in articles_page.object_list %}
-        <li class="post my-4">
-          <h4>
-            <a href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">{{ article.title }}</a>
-          </h4>
-          {{ article.summary }}
-        </li>
-        {% endfor %}
-      </ul>
+      {% for article in articles_page.object_list %}
+      {% if not loop.index is divisibleby 2 %}
+      {% set row_closed = false %}
+      <div class="row mb-2">
+      {% endif %}
+        <div class="col-md-6">
+          <div class="post overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <a href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">
+              <div class="col p-4 d-flex flex-column position-static">
+                {% if article.thumbnail %}
+                <img src="/static/imagens/{{ article.thumbnail }}">
+                {% endif %}
+                <h4 class="my-2">{{ article.title }}</h4>
+                {{ article.summary }}
+              </div> 
+            </a>
+          </div>
+        </div> 
+      {% if loop.index is divisibleby 2 %}
+      </div>
+      {% set row_closed = true %}
+      {% endif %}
+      {% endfor %}
+      {% if not row_closed %}
+      </div>
+      {% endif %}
 {% endblock %}
