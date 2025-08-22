@@ -20,15 +20,11 @@
               <ul class="nav justify-content-center">
                 {% for category, articles in categories %}
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ SITEURL }}/{{ category.url }}"
-                    >{{ category.name }}</a
-                  >
+                  <a class="nav-link" href="{{ SITEURL }}/{{ category.url }}">{{ category.name }}</a>
                 </li>
                 {% endfor %} {% for page in pages %}
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ SITEURL }}/{{ page.url }}"
-                    >{{ page.title }}</a
-                  >
+                  <a class="nav-link" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
                 </li>
                 {% endfor %}
               </ul>
