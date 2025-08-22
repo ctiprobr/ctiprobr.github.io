@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 
 # AUTHOR = "A Diretoria"
-SITENAME = "CTI"
+SITENAME = "CTI.PRO.BR"
 SITETITLE = "Profissionais da Ciência e Tecnologia da Informação"
 SITESUBTITLE = "Espaço organizado de maneira independente com o objetivo de fomentar o debate sobre temas que orbitam a categoria profissional."
 

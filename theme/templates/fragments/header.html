@@ -10,13 +10,9 @@
       <p class="fst-italic">{{ SITESUBTITLE }}</p>
       {% endif %}
 
-      <nav id="mainNav" class="navbar navbar-expand-lg border-top border-bottom">
+      <nav class="navbar border-top border-bottom">
         <div class="container">
           <div class="nav-links mx-auto">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              Menu <i class="fas fa-bars ms-1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="nav justify-content-center">
                 {% for category, articles in categories %}
                 <li class="nav-item">
@@ -28,7 +24,6 @@
                 </li>
                 {% endfor %}
               </ul>
-            </div>
           </div>
         </div>
       </nav>
